@@ -1,0 +1,61 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T10:42:13.924Z",
+  "summary": "The diff implements nearly all requirements comprehensively. All 13 REQs are addressed with matching components. Minor gaps exist: the navbar 'Insights' link maps to '#positioning' while the section uses id='positioning' not id='insights'. Internet Identity authentication is included despite the spec explicitly listing no authentication as a non-goal. A caffeine.ai attribution link is added to the footer without being requested.",
+  "missing_requirements": [
+    {
+      "requirement": "REQ-2: Navbar 'Insights' link should scroll to a section identifiable as Insights — the spec lists 7 nav links including 'Insights' each scrolling to their respective sections",
+      "reason": "The navbar maps 'Insights' to href='#positioning' and the App.tsx section uses id='positioning', not id='insights'. While it navigates somewhere, there is no section with id='insights' as would be expected from the spec's nav structure.",
+      "evidence": [
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "caffeine.ai attribution link with UTM tracking parameters added to the footer bottom bar",
+      "reason": "The build request does not mention any caffeine.ai attribution or third-party attribution links anywhere in the footer spec. This was added without being requested.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Internet Identity authentication provider and related hooks (useInternetIdentity, useActor) included and wrapping the entire app",
+      "reason": "The build request explicitly states 'No authentication or user accounts' as a non-goal. Despite this, InternetIdentityProvider wraps the entire app in main.tsx and full authentication hook infrastructure is present.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/FAQ.tsx",
+    "frontend/src/components/FinalCTA.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/IdealClients.tsx",
+    "frontend/src/components/Investment.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/Positioning.tsx",
+    "frontend/src/components/Process.tsx",
+    "frontend/src/components/Services.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Digitalamiro Design System — Light Mode */
+    --background: 0.98 0 0;
+    --foreground: 0.1 0 0;
+
+    --card: 0.96 0 0;
+    --card-foreground: 0.1 0 0;
+
+    --popover: 0.98 0 0;
+    --popover-foreground: 0.1 0 0;
+
+    --primary: 0.1 0 0;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.93 0 0;
+    --secondary-foreground: 0.1 0 0;
+
+    --muted: 0.93 0 0;
+    --muted-foreground: 0.45 0 0;
+
+    --accent: 0.72 0.09 75;
+    --accent-foreground: 0.1 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0 0;
+    --input: 0.88 0 0;
+    --ring: 0.72 0.09 75;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  .dark {
+    --background: 0.1 0 0;
+    --foreground: 0.97 0 0;
+    --card: 0.14 0 0;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.14 0 0;
+    --popover-foreground: 0.97 0 0;
+    --primary: 0.97 0 0;
+    --primary-foreground: 0.1 0 0;
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.97 0 0;
+    --muted: 0.18 0 0;
+    --muted-foreground: 0.55 0 0;
+    --accent: 0.72 0.09 75;
+    --accent-foreground: 0.1 0 0;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.72 0.09 75;
+    --sidebar: 0.205 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.488 0.243 264.376;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.269 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.439 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@layer utilities {
+  .section-dark {
+    background-color: oklch(0.1 0 0);
+    color: oklch(0.97 0 0);
+  }
+
+  .section-charcoal {
+    background-color: oklch(0.13 0 0);
+    color: oklch(0.97 0 0);
+  }
+
+  .section-light {
+    background-color: oklch(0.98 0 0);
+    color: oklch(0.1 0 0);
+  }
+
+  .section-off-white {
+    background-color: oklch(0.96 0 0);
+    color: oklch(0.1 0 0);
+  }
+
+  .text-accent-gold {
+    color: oklch(0.72 0.09 75);
+  }
+
+  .border-accent-gold {
+    border-color: oklch(0.72 0.09 75);
+  }
+
+  .bg-accent-gold {
+    background-color: oklch(0.72 0.09 75);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-200;
+    background-color: oklch(0.1 0 0);
+    color: oklch(0.97 0 0);
+  }
+
+  .btn-primary:hover {
+    background-color: oklch(0.18 0 0);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px oklch(0 0 0 / 20%);
+  }
+
+  .btn-primary-light {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-200;
+    background-color: oklch(0.97 0 0);
+    color: oklch(0.1 0 0);
+  }
+
+  .btn-primary-light:hover {
+    background-color: oklch(0.93 0 0);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px oklch(1 0 0 / 15%);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 border;
+    border-color: oklch(0.1 0 0);
+    color: oklch(0.1 0 0);
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background-color: oklch(0.1 0 0);
+    color: oklch(0.97 0 0);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 border;
+    border-color: oklch(0.97 0 0 / 40%);
+    color: oklch(0.97 0 0);
+    background: transparent;
+  }
+
+  .btn-outline-light:hover {
+    border-color: oklch(0.97 0 0);
+    background-color: oklch(0.97 0 0 / 8%);
+    transform: translateY(-1px);
+  }
+}

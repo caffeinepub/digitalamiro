@@ -1,0 +1,289 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Digitalamiro Premium Studio Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Apply cohesive visual design system with dark/light contrast, premium typography, and smooth interactions",
+      "acceptanceCriteria": [
+        "Color palette is limited to black, white, charcoal, and one accent color — no vivid gradients",
+        "Heading font size is visually dominant (64px+ on desktop)",
+        "All sections alternate between dark and light backgrounds consistently",
+        "Buttons have visible hover animation (scale or background transition)",
+        "Smooth scroll is active site-wide"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Establish global CSS variables for the color palette (black #0A0A0A, white #FFFFFF, charcoal #1C1C1E, accent #C9A96E), configure smooth scroll behavior globally, define the 8px-based spacing scale, and set up base typography with large-weight serif or geometric sans-serif display font for headings (64-80px bold) and clean body text. Add global transition rules for interactive elements."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom color palette (black, white, charcoal, accent), typography scale for dominant headings, 8px-based spacing grid, and transition utilities for smooth hover animations. Configure font families for display headings and body text."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build sticky navbar with logo, navigation links, and primary CTA with scroll-based styling",
+      "acceptanceCriteria": [
+        "Navbar stays fixed at top during scroll",
+        "All 7 nav links are present and scroll to their respective sections",
+        "'Book a Strategy Call →' button is visible and styled as primary CTA",
+        "Navbar becomes visually distinct (backdrop blur / border) when scrolled past hero"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "create",
+          "description": "Create sticky navbar component with Digitalamiro wordmark/logo on left, center navigation links (Home, Services, Work, Process, About, Insights, Contact) that scroll smoothly to section anchors, and 'Book a Strategy Call →' primary CTA button on right. Implement scroll detection hook to add backdrop blur and border-bottom when scrolled past hero. Include responsive mobile menu."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Navbar component at the top of the application layout, ensuring it remains fixed during scroll and appears above all other content with proper z-index."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Hero section with two-column layout featuring content and generated mockup image",
+      "acceptanceCriteria": [
+        "Two-column layout visible on desktop; stacks to single column on mobile",
+        "Headline is visually dominant — largest text on the page",
+        "All 5 bullet points render with checkmark icons",
+        "Both CTA buttons render with correct labels; primary is filled, secondary is outlined",
+        "Hero mockup image renders on the right side"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero section with two-column layout (responsive stacking on mobile). Left column: small label 'Premium Web Development Studio', large bold headline 'Custom Websites Built To Elevate Your Brand — And Convert.', two paragraph sentences, five bullet points with checkmark icons (✔ Fully custom website design tailored to your brand — never template-based; ✔ Conversion-focused UX structured to drive clear action; ✔ Fast, scalable, mobile-first development optimized for performance; ✔ SEO-ready foundation built for long-term visibility; ✔ Designed to support marketing and future scaling), primary CTA 'Book a Strategy Call →' and secondary outlined CTA 'View Our Work →'. Right column: render the generated website mockup image from frontend/public/assets/generated/hero-mockup.dim_900x640.png with responsive sizing, subtle drop shadow, and rounded corners."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Hero component below Navbar as the first main section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build Positioning section with dark background and impact statements",
+      "acceptanceCriteria": [
+        "Section has a dark/charcoal background contrasting with adjacent sections",
+        "Headline is bold and large",
+        "Four impact statements are visually distinct (e.g., larger size or accent color)",
+        "Section does not feel cluttered — generous spacing between elements"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Positioning.tsx",
+          "operation": "create",
+          "description": "Create Positioning section with dark background (charcoal #1C1C1E). Display large bold headline 'Most Websites Exist. Few Actually Perform.' Below it, render four impact statements ('It must build trust instantly.', 'It must communicate authority clearly.', 'It must guide visitors intentionally.', 'And it must convert.') with visual emphasis (larger size or accent color), followed by closing paragraph about building digital platforms with structure, strategy, and long-term growth. Use generous spacing between elements."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Positioning component after Hero section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Services section with three service cards and hover effects",
+      "acceptanceCriteria": [
+        "Three cards are displayed in a 3-column grid on desktop, stacking on mobile",
+        "Each card contains its headline, subheadline, bullet list, and CTA link",
+        "Cards have a border and a subtle hover shadow/lift animation",
+        "Section background is light, contrasting with the dark Positioning section"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "create",
+          "description": "Create Services section with light background and headline 'Focused Digital Infrastructure For Growth'. Display three equal-width cards in responsive grid (3 columns desktop, stacked mobile): (1) 'Custom Web Design & Development' with subheadline 'Engineered For Conversion And Authority', description, 6 bullet points, CTA 'Explore Web Development →'; (2) 'Performance-Ready Websites' with subheadline 'Built To Support Paid Traffic And Marketing', description, 5 bullet points, CTA 'Discuss Your Project →'; (3) 'eCommerce Development' with subheadline 'Online Stores Designed To Sell', description, 5 bullet points, CTA 'Build Your Store →'. Each card has subtle border and hover lift/shadow animation with smooth CSS transitions."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Services component after Positioning section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Process section with 5-step horizontal stepper showing structured approach",
+      "acceptanceCriteria": [
+        "All 5 steps are displayed with number, title, and description",
+        "Steps are connected visually (line, dots, or numbered flow)",
+        "Layout is horizontal on desktop and vertical/stacked on mobile",
+        "Section feels clean and uncluttered"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Process.tsx",
+          "operation": "create",
+          "description": "Create Process section with headline 'A Structured Approach. No Guesswork.' Display 5 steps in horizontal stepper layout on desktop (vertical on mobile) with connecting line or progress indicator: (1) Strategic Discovery, (2) UX Architecture, (3) Design & Development, (4) Testing & Optimization, (5) Launch & Ongoing Refinement. Each step displays step number, bold title, and one-sentence description with clean spacing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Process component after Services section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build About section with studio description and guiding principles on dark background",
+      "acceptanceCriteria": [
+        "Section headline and principles are clearly styled",
+        "Three principles are listed with visual emphasis (icon, border-left accent, or large bullet)",
+        "Closing contrast statement is typographically distinct",
+        "Section has a dark background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "create",
+          "description": "Create About section with dark background and headline 'A Boutique Studio With A Strategic Focus'. Include two-sentence studio description, then three guiding principles as styled list with visual emphasis (icon, border-left accent, or large bullet): 'Design with intention', 'Build with precision', 'Deliver with long-term thinking'. Close with typographically distinct contrast statement: 'We are not volume-driven. We are quality-driven.'"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render About component after Process section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Ideal Clients section listing target client types with honest qualifier",
+      "acceptanceCriteria": [
+        "All 4 client types are listed clearly",
+        "Qualifier copy is visually set apart from the list (e.g., italic, lighter color, or boxed)",
+        "Section does not include any fake metrics or exaggerated claims"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/IdealClients.tsx",
+          "operation": "create",
+          "description": "Create 'Who We Work With' section on light background with section title and four client type statements: 'Founders building serious brands', 'Growing businesses investing in digital infrastructure', 'Companies seeking authority positioning', 'Businesses prioritizing long-term scalability'. Below the list, render honest qualifier copy visually set apart (italic, lighter color, or boxed): 'If you're looking for the lowest quote — we may not be the right fit. If you're investing in strategic growth — we align well.'"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render IdealClients component after About section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Build Investment section with prominent pricing display and CTA",
+      "acceptanceCriteria": [
+        "Starting price is displayed prominently in a large font size",
+        "Section clearly communicates custom pricing without fake tiers or inflated claims",
+        "CTA button is present and styled consistently with the primary button style"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Investment.tsx",
+          "operation": "create",
+          "description": "Create Investment section with headline 'Strategic Investment In Digital Infrastructure'. Display intro sentence, prominent large typographic display of starting price '₹1,50,000+', supporting line about comprehensive engagements being discussed during consultation, closing tone statement 'Quality execution requires intention and commitment.', and primary CTA button 'Book a Strategy Call →'."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Investment component after IdealClients section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Build FAQ section with accordion component for 4 questions",
+      "acceptanceCriteria": [
+        "All 4 FAQ items render with correct questions and answers",
+        "Accordion opens/closes on click with smooth animation",
+        "Only one item is open at a time",
+        "Visual indicator (chevron/plus) shows open/closed state"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FAQ.tsx",
+          "operation": "create",
+          "description": "Create FAQ section with headline 'Frequently Asked Questions' and accordion component. Use the shadcn-ui Accordion component to support single-item expansion with smooth animations. Include 4 FAQ items: (1) 'How long does a website take?' → 'Typically 4–8 weeks depending on complexity.'; (2) 'Do you use templates?' → 'No. All websites are fully custom-built.'; (3) 'Do you offer post-launch support?' → 'Yes. Structured ongoing support and optimization is available.'; (4) 'How do we begin?' → 'Start with a strategy call to determine alignment.' Include visual indicator (chevron/plus) for open/closed state. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render FAQ component after Investment section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Build final CTA section with contact information and primary action button",
+      "acceptanceCriteria": [
+        "Section has a dark background and feels visually impactful",
+        "Headline is large and dominant",
+        "Three-line clarity statements are typographically clean",
+        "CTA button is large and prominent",
+        "Email renders as a working mailto link"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinalCTA.tsx",
+          "operation": "create",
+          "description": "Create final CTA section with dark background. Display large dominant headline 'Ready To Build With Intention?' followed by 'Book a strategy call to discuss your goals, positioning, and growth direction.' Show three short lines: 'Clear process. Clear expectations. Clear execution.' Render large primary CTA button 'Book Your Strategy Call →'. Below button, display 'hello@digitalamiro.com' as working mailto link and 'India' as location text."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render FinalCTA component after FAQ section with appropriate section ID for navigation anchor."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Build minimal footer with three-column layout and copyright bar",
+      "acceptanceCriteria": [
+        "Footer has three columns on desktop, stacking on mobile",
+        "All services and quick links are present",
+        "Copyright bar is present with Privacy Policy and Terms links",
+        "Footer is visually minimal — no clutter"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create minimal footer with dark background. Three responsive columns (stacking on mobile): Left column with Digitalamiro wordmark + tagline 'Strategic Web Development.'; Center column with Services list (Web Development, eCommerce, Performance-Ready Websites); Right column with Quick Links (Home, Services, Work, Process, Contact). Bottom copyright bar: '© 2026 Digitalamiro. All Rights Reserved.' with 'Privacy Policy' and 'Terms' links. Keep visually minimal with no clutter."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Footer component at the bottom of the application layout after all main sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Render generated hero mockup image as premium static asset in Hero section",
+      "acceptanceCriteria": [
+        "Image loads from /assets/generated/hero-mockup.dim_900x640.png",
+        "Image is visible on desktop in the right column of the hero",
+        "Image has a drop shadow and rounded corners",
+        "Image scales down gracefully on mobile without breaking layout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Ensure the Hero component's right column renders the generated website mockup image from frontend/public/assets/generated/hero-mockup.dim_900x640.png with responsive sizing, subtle drop shadow, rounded corners for premium feel, and graceful mobile scaling. Verify the image path references the exact generated filename with dimension suffix."
+        }
+      ]
+    }
+  ]
+}

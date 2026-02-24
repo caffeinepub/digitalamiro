@@ -1,0 +1,17 @@
+{
+  "frontend/src/index.css": "Global stylesheet establishing the Digitalamiro design system — OKLCH color tokens for ink/snow/gold palette, Google Fonts import for Syne (display) and Inter (body), smooth scroll, and utility classes for section backgrounds, button variants, and accent colors.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom font families (Syne/Inter), ink/snow/gold color tokens, display font size scale, mockup/card box shadows, and fade-up animation keyframes.",
+  "frontend/src/App.tsx": "Root application component that composes all page sections in order — Navbar, Hero, Positioning, Services, Process, About, IdealClients, Investment, FAQ, FinalCTA, and Footer — each wrapped in a section with an anchor ID.",
+  "frontend/src/components/Navbar.tsx": "Sticky top navbar with Digitalamiro wordmark, 7 smooth-scroll navigation links, a primary CTA button, scroll-triggered backdrop blur/border styling, and a responsive mobile menu.",
+  "frontend/src/components/Hero.tsx": "Two-column hero section with label badge, dominant display headline, descriptive paragraphs, 5 checkmark bullet points, primary/outline CTA buttons, and the generated website mockup image with drop shadow on the right.",
+  "frontend/src/components/Positioning.tsx": "Dark charcoal section with large headline \"Most Websites Exist. Few Actually Perform.\" and four bold impact statements alongside closing strategic copy.",
+  "frontend/src/components/Services.tsx": "Light-background 3-column services grid with numbered cards for Custom Web Design, Performance-Ready Websites, and eCommerce — each with headline, description, bullet list, and hover lift animation.",
+  "frontend/src/components/Process.tsx": "Off-white section displaying 5 process steps in a horizontal stepper (desktop) with connecting line and vertical stacked layout (mobile), each showing a numbered circle, title, and description.",
+  "frontend/src/components/About.tsx": "Dark section with two-column layout — left has studio description and a typographic contrast statement, right shows three guiding principles as styled bordered cards.",
+  "frontend/src/components/IdealClients.tsx": "Light section with two-column layout — left lists 4 client types with gold checkmarks, right shows an honest qualifier note in a bordered card with italic/bold contrast.",
+  "frontend/src/components/Investment.tsx": "Off-white centered section with large ₹1,50,000+ price display, supporting copy, and a primary CTA button linking to the contact section.",
+  "frontend/src/components/FAQ.tsx": "Light section using the shadcn Accordion component for 4 FAQ items with single-item expansion, chevron indicators, and smooth open/close animation.",
+  "frontend/src/components/FinalCTA.tsx": "Dark impactful closing section with large headline, clarity statements, a prominent CTA button, and mailto/location contact details.",
+  "frontend/src/components/Footer.tsx": "Minimal dark footer with 3-column grid (brand, services, quick links), smooth-scroll navigation, copyright bar with Privacy/Terms links, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks — no backend queries needed for this static marketing site."
+}

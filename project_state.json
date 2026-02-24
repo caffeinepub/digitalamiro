@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Premium, minimal, high-converting single-page website for Digitalamiro — a boutique strategic web development studio. Features sticky navbar, hero with mockup, positioning, 3-column services, 5-step process, about, ideal clients, investment, FAQ accordion, final CTA, and minimal footer. Design: dark/light contrast, Stripe/Linear/Apple aesthetic, black/white/charcoal palette with subtle accent.",
+  "architectural_notes": [
+    "Single HTML file with embedded CSS and JS; no frameworks or templates",
+    "Color palette: black, white, charcoal (#1a1a1a), with a subtle accent (e.g., #6C63FF or muted blue)",
+    "Smooth scroll animations using Intersection Observer API",
+    "FAQ section uses vanilla JS accordion (no libraries)",
+    "Hero mockup: SVG or CSS-drawn browser/website mockup — no stock images"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- A sleek, dark-themed browser window mockup showing a professional website UI with clean typography, minimal navigation bar, a bold hero headline, and abstract layout blocks suggesting a premium agency site. No real brand logos. Dark background with white UI elements and subtle amber/warm highlights (hero-mockup.dim_900x640.png)",
+  "existing_features": [
+    {
+      "id": "feature-apply-a-cohesive-visual-design-system-across-the-entire-site-black-0a0a0a-white-ffffff-and-charcoal-1c1c1e-as-the-primary-palette-with-a-single-subtle-warm-gray-or-amber-accent-c9a96e-or-similar-use-a-strong-typographic-hierarchy-with-a-large-weight-serif-or-geometric-sans-serif-display-font-for-headings-e-g-64-80px-bold-clean-body-text-generous-white-space-consistent-8px-based-spacing-grid-and-alternating-dark-light-contrast-sections-all-interactive-elements-buttons-accordion-toggles-should-have-smooth-css-transitions-apply-smooth-scroll-behavior-globally",
+      "title": "Apply a cohesive visual design system across the entire site: black (#0A0A0A), white (#FFFFFF), and charcoal (#1C1C1E) as the primary palette with a single subtle warm-gray or amber accent (#C9A96E or similar). Use a strong typographic hierarchy with a large-weight serif or geometric sans-serif display font for headings (e.g., 64–80px bold), clean body text, generous white space, consistent 8px-based spacing grid, and alternating dark/light contrast sections. All interactive elements (buttons, accordion toggles) should have smooth CSS transitions. Apply smooth scroll behavior globally.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-sticky-top-navbar-that-remains-fixed-on-scroll-include-the-digitalamiro-wordmark-logo-on-the-left-navigation-links-home-services-work-process-about-insights-contact-in-the-center-and-a-primary-cta-button-book-a-strategy-call-on-the-right-the-navbar-should-have-a-subtle-backdrop-blur-and-border-bottom-on-scroll-to-stay-readable-against-both-dark-and-light-sections",
+      "title": "Build a sticky top navbar that remains fixed on scroll. Include the Digitalamiro wordmark/logo on the left, navigation links (Home, Services, Work, Process, About, Insights, Contact) in the center, and a primary CTA button 'Book a Strategy Call →' on the right. The navbar should have a subtle backdrop blur and border-bottom on scroll to stay readable against both dark and light sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-as-a-two-column-layout-left-column-contains-a-small-label-span-premium-web-development-studio-a-large-bold-headline-custom-websites-built-to-elevate-your-brand-and-convert-two-short-paragraph-sentences-five-bullet-points-fully-custom-website-design-tailored-to-your-brand-never-template-based-conversion-focused-ux-structured-to-drive-clear-action-fast-scalable-mobile-first-development-optimized-for-performance-seo-ready-foundation-built-for-long-term-visibility-designed-to-support-marketing-and-future-scaling-a-primary-cta-book-a-strategy-call-and-a-secondary-cta-view-our-work-right-column-renders-the-generated-website-mockup-image-hero-mockup-dim-900x640-png-from-frontend-public-assets-generated",
+      "title": "Build the Hero section as a two-column layout: left column contains a small label span 'Premium Web Development Studio', a large bold headline 'Custom Websites Built To Elevate Your Brand — And Convert.', two short paragraph sentences, five bullet points (✔ Fully custom website design tailored to your brand — never template-based; ✔ Conversion-focused UX structured to drive clear action; ✔ Fast, scalable, mobile-first development optimized for performance; ✔ SEO-ready foundation built for long-term visibility; ✔ Designed to support marketing and future scaling), a primary CTA 'Book a Strategy Call →' and a secondary CTA 'View Our Work →'. Right column renders the generated website mockup image (hero-mockup.dim_900x640.png) from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-positioning-section-with-a-dark-background-display-the-headline-most-websites-exist-few-actually-perform-in-large-bold-text-below-it-render-the-four-short-impact-statements-it-must-build-trust-instantly-it-must-communicate-authority-clearly-it-must-guide-visitors-intentionally-and-it-must-convert-followed-by-the-closing-paragraph-about-building-digital-platforms-with-structure-strategy-and-long-term-growth-in-mind",
+      "title": "Build the Positioning section with a dark background. Display the headline 'Most Websites Exist. Few Actually Perform.' in large bold text. Below it, render the four short impact statements ('It must build trust instantly.', 'It must communicate authority clearly.', 'It must guide visitors intentionally.', 'And it must convert.') followed by the closing paragraph about building digital platforms with structure, strategy, and long-term growth in mind.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-services-section-with-a-light-background-and-the-headline-focused-digital-infrastructure-for-growth-display-three-equal-width-cards-columns-1-custom-web-design-development-subheadline-engineered-for-conversion-and-authority-description-6-bullet-points-cta-explore-web-development-2-performance-ready-websites-subheadline-built-to-support-paid-traffic-and-marketing-description-5-bullet-points-cta-discuss-your-project-3-ecommerce-development-subheadline-online-stores-designed-to-sell-description-5-bullet-points-cta-build-your-store-each-card-has-a-subtle-border-and-hover-lift-effect",
+      "title": "Build the Services section with a light background and the headline 'Focused Digital Infrastructure For Growth'. Display three equal-width cards/columns: (1) 'Custom Web Design & Development' — subheadline 'Engineered For Conversion And Authority', description, 6 bullet points, CTA 'Explore Web Development →'; (2) 'Performance-Ready Websites' — subheadline 'Built To Support Paid Traffic And Marketing', description, 5 bullet points, CTA 'Discuss Your Project →'; (3) 'eCommerce Development' — subheadline 'Online Stores Designed To Sell', description, 5 bullet points, CTA 'Build Your Store →'. Each card has a subtle border and hover lift effect.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-process-section-with-the-headline-a-structured-approach-no-guesswork-display-5-steps-in-a-horizontal-stepper-on-desktop-vertical-on-mobile-1-strategic-discovery-2-ux-architecture-3-design-development-4-testing-optimization-5-launch-ongoing-refinement-each-step-shows-a-step-number-bold-title-and-one-sentence-description-use-a-connecting-line-or-progress-indicator-between-steps",
+      "title": "Build the Process section with the headline 'A Structured Approach. No Guesswork.' Display 5 steps in a horizontal stepper on desktop (vertical on mobile): (1) Strategic Discovery, (2) UX Architecture, (3) Design & Development, (4) Testing & Optimization, (5) Launch & Ongoing Refinement. Each step shows a step number, bold title, and one-sentence description. Use a connecting line or progress indicator between steps.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-about-section-with-the-headline-a-boutique-studio-with-a-strategic-focus-include-the-two-sentence-studio-description-then-three-guiding-principles-as-a-styled-list-design-with-intention-build-with-precision-deliver-with-long-term-thinking-close-with-the-contrast-statement-we-are-not-volume-driven-we-are-quality-driven-use-a-dark-background-for-this-section",
+      "title": "Build the About section with the headline 'A Boutique Studio With A Strategic Focus'. Include the two-sentence studio description, then three guiding principles as a styled list: 'Design with intention', 'Build with precision', 'Deliver with long-term thinking'. Close with the contrast statement: 'We are not volume-driven. We are quality-driven.' Use a dark background for this section.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-who-we-work-with-ideal-clients-section-on-a-light-background-display-a-section-title-and-four-client-type-statements-founders-building-serious-brands-growing-businesses-investing-in-digital-infrastructure-companies-seeking-authority-positioning-businesses-prioritizing-long-term-scalability-below-the-list-render-the-honest-qualifier-copy-if-you-re-looking-for-the-lowest-quote-we-may-not-be-the-right-fit-if-you-re-investing-in-strategic-growth-we-align-well",
+      "title": "Build the 'Who We Work With' (Ideal Clients) section on a light background. Display a section title and four client type statements: 'Founders building serious brands', 'Growing businesses investing in digital infrastructure', 'Companies seeking authority positioning', 'Businesses prioritizing long-term scalability'. Below the list, render the honest qualifier copy: 'If you're looking for the lowest quote — we may not be the right fit. If you're investing in strategic growth — we align well.'",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-investment-section-with-the-headline-strategic-investment-in-digital-infrastructure-display-a-short-intro-sentence-the-starting-price-1-50-000-as-a-large-prominent-typographic-display-element-a-supporting-line-about-comprehensive-engagements-being-discussed-during-consultation-and-a-closing-tone-statement-quality-execution-requires-intention-and-commitment-include-a-book-a-strategy-call-cta-button",
+      "title": "Build the Investment section with the headline 'Strategic Investment In Digital Infrastructure'. Display: a short intro sentence, the starting price '₹1,50,000+' as a large, prominent typographic display element, a supporting line about comprehensive engagements being discussed during consultation, and a closing tone statement 'Quality execution requires intention and commitment.' Include a 'Book a Strategy Call →' CTA button.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-faq-section-with-the-headline-frequently-asked-questions-and-an-accordion-component-include-4-faq-items-1-how-long-does-a-website-take-typically-4-8-weeks-depending-on-complexity-2-do-you-use-templates-no-all-websites-are-fully-custom-built-3-do-you-offer-post-launch-support-yes-structured-ongoing-support-and-optimization-is-available-4-how-do-we-begin-start-with-a-strategy-call-to-determine-alignment-only-one-accordion-item-should-be-open-at-a-time",
+      "title": "Build the FAQ section with the headline 'Frequently Asked Questions' and an accordion component. Include 4 FAQ items: (1) 'How long does a website take?' → 'Typically 4–8 weeks depending on complexity.'; (2) 'Do you use templates?' → 'No. All websites are fully custom-built.'; (3) 'Do you offer post-launch support?' → 'Yes. Structured ongoing support and optimization is available.'; (4) 'How do we begin?' → 'Start with a strategy call to determine alignment.' Only one accordion item should be open at a time.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-final-cta-section-with-a-dark-background-display-the-headline-ready-to-build-with-intention-followed-by-book-a-strategy-call-to-discuss-your-goals-positioning-and-growth-direction-then-show-the-three-short-lines-clear-process-clear-expectations-clear-execution-render-a-large-primary-cta-button-book-your-strategy-call-below-the-button-display-hello-digitalamiro-com-as-a-mailto-link-and-india-as-the-location",
+      "title": "Build the final CTA section with a dark background. Display the headline 'Ready To Build With Intention?' followed by 'Book a strategy call to discuss your goals, positioning, and growth direction.' Then show the three short lines: 'Clear process. Clear expectations. Clear execution.' Render a large primary CTA button 'Book Your Strategy Call →'. Below the button, display 'hello@digitalamiro.com' as a mailto link and 'India' as the location.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-minimal-footer-with-a-dark-background-left-column-digitalamiro-wordmark-tagline-strategic-web-development-center-column-services-list-web-development-ecommerce-performance-ready-websites-right-column-quick-links-home-services-work-process-contact-bottom-bar-2026-digitalamiro-all-rights-reserved-with-privacy-policy-and-terms-links",
+      "title": "Build the minimal footer with a dark background. Left column: Digitalamiro wordmark + tagline 'Strategic Web Development.' Center column: Services list (Web Development, eCommerce, Performance-Ready Websites). Right column: Quick Links (Home, Services, Work, Process, Contact). Bottom bar: '© 2026 Digitalamiro. All Rights Reserved.' with 'Privacy Policy' and 'Terms' links.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-hero-mockup-image-hero-mockup-dim-900x640-png-as-a-static-asset-from-frontend-public-assets-generated-display-it-in-the-hero-section-s-right-column-with-responsive-sizing-subtle-drop-shadow-and-a-slight-rounded-corner-for-a-premium-feel",
+      "title": "Render the generated hero mockup image (hero-mockup.dim_900x640.png) as a static asset from frontend/public/assets/generated. Display it in the Hero section's right column with responsive sizing, subtle drop shadow, and a slight rounded corner for a premium feel.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Sticky navbar with logo, nav links, and 'Book a Strategy Call' CTA button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Hero section with left content (headline, bullets, CTAs) and right website mockup visual",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Positioning section: 'Most Websites Exist. Few Actually Perform.'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Services section with 3 columns: Custom Web Design, Performance-Ready Websites, eCommerce Development",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Process section with 5 steps: Discovery, UX Architecture, Design & Dev, Testing, Launch & Refinement",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "About section highlighting boutique studio, limited projects, 3 guiding principles",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Ideal clients / 'Who We Work With' section with 4 client types and honest qualifier copy",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Investment section showing ₹1,50,000+ starting price with consultation CTA",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "FAQ accordion with 4 questions about timeline, templates, support, and getting started",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Final CTA section 'Ready To Build With Intention?' with email and location, plus minimal footer",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Digitalamiro",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
